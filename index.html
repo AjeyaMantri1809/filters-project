@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Image Filters Project</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<title>
+Image Filters Project 
+</title>
+
+ <script src='https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js'></script>
+
+<h1> Fun filters to apply <br> on your images :) </h1>
+
+ <p>
+  <canvas id = "imgCanvas"> </canvas>
+</p>
+
+<p>
+  <h3> Load Image </h3>
+  <input type = "file"
+         multiple = "false"
+         accept = "image/*"
+         id = "imageInput"
+         onchange = "uploadImage()"
+         />
+</p>
+
+<p>
+  <h3> Choose Filter</h3>
+  <input type = "button"
+         id = "grayscalebutton"
+         value = "Grayscale"
+         onclick = "filterGrayscale()"
+         title =  "Averages out RGB values for each pixel to make the picture more subdued and grayish"
+         />
+  <input type = "button"
+         id = "negativebutton"
+         value = "Negative (MUST TRY)"
+         title = "Swaps dark and light areas in an image to produce a negative effect, like in old cameras using photoelectric film"
+         onclick = "filterNegative()"
+         />
+<input type = "button"
+         id = "rainbowbutton"
+         value = "Rainbow"
+       title = "Uses algorithm provided by the course for each pixel to add a vertical rainbow hue to the image"
+         onclick = "filterRainbow()"
+         />
+<input type = "button"
+         id = "blursbutton"
+         value = "Blur"
+       title = "Algorithmically scatters nearby pixels to add a blur effect to the image"
+         onclick = "filterBlur()"
+         />
+<br> <br>
+<input type = "button"
+         id = "redsplashbutton"
+         value = "Red Splash"
+         title = "Maximises the red value for each pixel to add a red tint to the image"
+         onclick = "filterRedSplash()"
+         />
+<input type = "button"
+         id = "greensplashbutton"
+         value = "Green Splash"
+         title = "Maximises the green value for each pixel to add a green tint to the image"
+         onclick = "filterGreenSplash()"
+         />
+<input type = "button"
+         id = "bluesplashbutton"
+         value = "Blue Splash"
+         title = "Maximises the blue value for each pixel to add a blue tint to the image"
+         onclick = "filterBlueSplash()"
+         />
+
+<br> <br>
+<input type = "button"
+         id = "redhuebutton"
+         value = "Red Hue"
+         title = "Uses algorithm provided by the course for each pixel to add a red tint to the image"
+         onclick = "filterRedHue()"
+         />
+<input type = "button"
+         id = "greenhuebutton"
+         value = "Green Hue"
+         title = "Uses algorithm provided by the course for each pixel to add a green tint to the image"
+         onclick = "filterGreenHue()"
+         />
+<input type = "button"
+         id = "bluehuebutton"
+         value = "Blue Hue"
+         title = "Uses algorithm provided by the course for each pixel to add a blue tint to the image"
+         onclick = "filterBlueHue()"
+         />
+</p>
+
+<p>
+  <input type = "button"
+         id = "resetbutton"
+         value = "Reset Image"
+         title = "Resets to the originally uploaded photo by removing all filters"
+         onclick = "resetImage()"
+         />
+    <input type = "button"
+         id = "removebutton"
+         value = "Remove Image"
+           title = "Removes the uploaded image from the page"
+         onclick = "removeImage()"
+         />
+</p>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
